@@ -1,0 +1,29 @@
+aid: tabnine
+url: https://raw.githubusercontent.com/api-evangelist/tabnine/refs/heads/main/apis.yml
+name: Tabnine
+x-type: company
+description: >-
+  Tabnine provides AI code completion and chat across IDEs, with strong support for self-hosted, air-gapped, and enterprise deployment models. Offers code privacy guarantees and custom-model fine-tuning.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - Developer Tools
+  - Code Completion
+  - Self-Hosted
+  - Enterprise
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.tabnine.com/
+  - type: Plans
+    url: plans/tabnine-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/tabnine-rate-limits.yml
+  - type: FinOps
+    url: finops/tabnine-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
