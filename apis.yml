@@ -3,7 +3,11 @@ url: https://raw.githubusercontent.com/api-evangelist/tabnine/refs/heads/main/ap
 name: Tabnine
 x-type: company
 description: >-
-  Tabnine provides AI code completion and chat across IDEs, with strong support for self-hosted, air-gapped, and enterprise deployment models. Offers code privacy guarantees and custom-model fine-tuning.
+  Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI,
+  with strong support for SaaS, VPC, and air-gapped on-prem deployments. The Enterprise
+  Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's
+  consumer surface is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI;
+  there is no general-purpose public REST inference API for end-developers.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +15,56 @@ tags:
   - Code Completion
   - Self-Hosted
   - Enterprise
+  - Privacy
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: tabnine:plugins
+    name: Tabnine IDE Plugins
+    description: >-
+      VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing
+      autocomplete, chat, and agentic workflows. Communicates with Tabnine's hosted or
+      self-hosted backend over a proprietary protocol.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.tabnine.com/
+    baseURL: https://www.tabnine.com
+    tags:
+      - Plugins
+      - IDE
+      - Autocomplete
+      - Chat
+    properties:
+      - type: ProductPage
+        url: https://www.tabnine.com/
+      - type: Documentation
+        url: https://docs.tabnine.com/
+  - aid: tabnine:enterprise
+    name: Tabnine Enterprise (Admin Suite + Context Engine)
+    description: >-
+      Enterprise SKU with admin console (data analytics, model provisioning, context
+      permissions, SSO), Enterprise Context Engine (codebase indexing), and flexible
+      deployment (SaaS / VPC / Local / Air-Gapped). $39/user/month list price; custom
+      enterprise contracts available.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.tabnine.com/pricing-enterprise-context-engine/
+    baseURL: https://www.tabnine.com
+    tags:
+      - Enterprise
+      - Self-Hosted
+      - Air-Gapped
+      - SSO
+      - Admin
+    properties:
+      - type: ProductPage
+        url: https://www.tabnine.com/pricing-enterprise-context-engine/
+      - type: Documentation
+        url: https://docs.tabnine.com/
 common:
   - type: Website
     url: https://www.tabnine.com/
+  - type: Documentation
+    url: https://docs.tabnine.com/
   - type: Plans
     url: plans/tabnine-plans-pricing.yml
   - type: RateLimits
