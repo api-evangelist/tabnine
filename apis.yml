@@ -71,6 +71,10 @@ common:
     url: rate-limits/tabnine-rate-limits.yml
   - type: FinOps
     url: finops/tabnine-finops.yml
+  - type: Integrations
+    url: https://www.tabnine.com/partners/
+integrations:
+  - name: Log in
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
