@@ -1,7 +1,7 @@
 aid: tabnine
 url: https://raw.githubusercontent.com/api-evangelist/tabnine/refs/heads/main/apis.yml
 name: Tabnine
-x-type: company
+kind: company
 description: >-
   Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI,
   with strong support for SaaS, VPC, and air-gapped on-prem deployments. The Enterprise
