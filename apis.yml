@@ -61,6 +61,10 @@ apis:
       - type: Documentation
         url: https://docs.tabnine.com/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/codota
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/tabnine
   - type: Website
     url: https://www.tabnine.com/
   - type: Documentation
