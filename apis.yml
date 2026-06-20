@@ -8,7 +8,7 @@ description: >-
   Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's
   consumer surface is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI;
   there is no general-purpose public REST inference API for end-developers.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Developer Tools
@@ -26,7 +26,7 @@ apis:
       VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing
       autocomplete, chat, and agentic workflows. Communicates with Tabnine's hosted or
       self-hosted backend over a proprietary protocol.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.tabnine.com/
     baseURL: https://www.tabnine.com
     tags:
@@ -46,7 +46,7 @@ apis:
       permissions, SSO), Enterprise Context Engine (codebase indexing), and flexible
       deployment (SaaS / VPC / Local / Air-Gapped). $39/user/month list price; custom
       enterprise contracts available.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.tabnine.com/pricing-enterprise-context-engine/
     baseURL: https://www.tabnine.com
     tags:
