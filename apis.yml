@@ -61,6 +61,10 @@ apis:
       - type: Documentation
         url: https://docs.tabnine.com/
 common:
+  - type: TrustCenter
+    url: security/tabnine-trust-center.yml
+  - type: DomainSecurity
+    url: security/tabnine-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/codota
   - type: LinkedIn
@@ -77,6 +81,8 @@ common:
     url: finops/tabnine-finops.yml
   - type: Integrations
     url: https://www.tabnine.com/partners/
+  - url: https://www.tabnine.com/blog/feed/
+    type: Blog
 integrations:
   - name: Log in
 maintainers:
