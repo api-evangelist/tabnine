@@ -22,6 +22,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tabnine.png
 tags:
+  - Artificial Intelligence
+  - Developer Tools
+  - Code Completion
+  - Self-Hosted
+  - Enterprise
+  - Privacy
+tags_raw:
   - AI
   - Developer Tools
   - Code Completion
