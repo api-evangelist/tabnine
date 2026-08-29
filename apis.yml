@@ -8,6 +8,17 @@ description: >-
   Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's
   consumer surface is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI;
   there is no general-purpose public REST inference API for end-developers.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
