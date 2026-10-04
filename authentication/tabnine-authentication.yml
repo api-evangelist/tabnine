@@ -1,0 +1,18 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md
+sources:
+- https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md
+- https://docs.tabnine.com/main/administering-tabnine/managing-your-team/user-management/service-accounts-and-token-limits.md
+- https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/access-tokens.md
+- https://docs.tabnine.com/main/getting-started/install.md
+description: Authentication methods documented for Tabnine
+schemes:
+- type: http-bearer
+  name: Personal Access Token
+  evidence: Include the PAT as a bearer token in the Authorization header of your HTTP requests.
+  location: header
+  header: Authorization
+  how_to_obtain: Generate a PAT in the Admin Console under Settings → Access Tokens, copy the token value (it will not be shown again).
+docs: https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md

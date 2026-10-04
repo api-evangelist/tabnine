@@ -1,0 +1,32 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+sources:
+- https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+description: Tabnine CLI hook events
+events:
+- event: SessionStart
+  description: Fires on application startup, when resuming a session, or after a `/clear` command.
+- event: SessionEnd
+  description: Fires when the CLI exits or a session is cleared.
+- event: BeforeAgent
+  description: Fires after a user submits a prompt but before the agent begins planning.
+- event: AfterAgent
+  description: Fires after the model generates its final response for a turn.
+- event: BeforeTool
+  description: Fires before a tool is executed. Used for argument validation, security checks, and parameter rewriting.
+- event: AfterTool
+  description: Fires after a tool executes. Used for result auditing, context injection, or hiding sensitive output.
+- event: BeforeModel
+  description: Fires before sending a request to the LLM.
+- event: AfterModel
+  description: Fires after receiving an LLM response chunk.
+- event: BeforeToolSelection
+  description: Fires before the LLM decides which tools to call. Used to filter the available toolset.
+- event: PreCompress
+  description: Fires before the CLI summarizes history to save tokens.
+- event: Notification
+  description: Fires when the CLI emits a system alert (e.g., tool permission request).
+delivery: {}
+docs: https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md

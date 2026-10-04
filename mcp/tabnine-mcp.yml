@@ -1,0 +1,110 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/tabnine-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.tabnine.com, www.tabnine.com, docs.tabnine.com, console.tabnine.com;
+  verdict opaque (https://status.tabnine.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 19 operation(s) in the provider''s own OpenAPI (19 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: get_groups
+  operationId: get_Groups
+  method: GET
+  path: /Groups
+  description: List/search groups
+- name: post_groups
+  operationId: post_Groups
+  method: POST
+  path: /Groups
+  description: Create a group
+- name: get_groups_id
+  operationId: get_Groups_id
+  method: GET
+  path: /Groups/{id}
+  description: Get a group by ID
+- name: put_groups_id
+  operationId: put_Groups_id
+  method: PUT
+  path: /Groups/{id}
+  description: Replace a group
+- name: get_schemas_id
+  operationId: get_Schemas_id
+  method: GET
+  path: /Schemas/{id}
+  description: Get a single schema by its URN ID
+- name: get_users
+  operationId: get_Users
+  method: GET
+  path: /Users
+  description: List/search users
+- name: post_users
+  operationId: post_Users
+  method: POST
+  path: /Users
+  description: Create a user
+- name: get_users_id
+  operationId: get_Users_id
+  method: GET
+  path: /Users/{id}
+  description: Get a user by ID
+- name: get_main_getting_started_install_client_setup_private_instal
+  operationId: get_main_getting_started_install_client_setup_private_installation_md
+  method: GET
+  path: /main/getting-started/install/client-setup-private-installation.md
+  description: Client Setup (Private/Enterprise-SaaS)
+- name: get_main_getting_started_tabnine_cli_examples_md
+  operationId: get_main_getting_started_tabnine_cli_examples_md
+  method: GET
+  path: /main/getting-started/tabnine-cli/examples.md
+  description: Examples
+- name: get_main_getting_started_tabnine_cli_features_agent_guidelin
+  operationId: get_main_getting_started_tabnine_cli_features_agent_guidelines_cli_md
+  method: GET
+  path: /main/getting-started/tabnine-cli/features/agent-guidelines-cli.md
+  description: Agent Guidelines (CLI)
+- name: get_main_getting_started_tabnine_cli_features_hooks_hookid
+  operationId: get_main_getting_started_tabnine_cli_features_hooks_hookid
+  method: GET
+  path: /main/getting-started/tabnine-cli/features/hooks/{hookid}
+  description: Event Reference
+- name: get_main_getting_started_tabnine_cli_features_settings_setti
+  operationId: get_main_getting_started_tabnine_cli_features_settings_settings_reference_md
+  method: GET
+  path: /main/getting-started/tabnine-cli/features/settings/settings-reference.md
+  description: Settings Reference
+- name: get_main_getting_started_tabnine_cli_getting_started_quickst
+  operationId: get_main_getting_started_tabnine_cli_getting_started_quickstart_md
+  method: GET
+  path: /main/getting-started/tabnine-cli/getting-started/quickstart.md
+  description: Quickstart
+- name: get_main_getting_started_tabnine_cli_git_integrations_github
+  operationId: get_main_getting_started_tabnine_cli_git_integrations_github_actions_tabnine_cli
+  method: GET
+  path: /main/getting-started/tabnine-cli/git-integrations/github-actions/tabnine-cli-gha-trust-guidance.md
+  description: Tabnine CLI GHA Trust Guidance
+- name: get_main_getting_started_tabnine_plugin_for_opencode_migrati
+  operationId: get_main_getting_started_tabnine_plugin_for_opencode_migrating_from_tabnine_cli_
+  method: GET
+  path: /main/getting-started/tabnine-plugin-for-opencode/migrating-from-tabnine-cli.md
+  description: Migrating from Tabnine CLI
+- name: get_main_getting_started_gettingstartedid
+  operationId: get_main_getting_started_gettingstartedid
+  method: GET
+  path: /main/getting-started/{gettingstartedid}
+  description: Quickstart Guide
+- name: get_main_welcome_readme_protection_provenance_and_attributio
+  operationId: get_main_welcome_readme_protection_provenance_and_attribution_in_tabnine_cli_md
+  method: GET
+  path: /main/welcome/readme/protection/provenance-and-attribution-in-tabnine-cli.md
+  description: Provenance & Attribution in Tabnine CLI
+- name: get_main_welcome_readme_system_requirements_tabnine_client_a
+  operationId: get_main_welcome_readme_system_requirements_tabnine_client_and_deployment_requir
+  method: GET
+  path: /main/welcome/readme/system-requirements/tabnine-client-and-deployment-requirements.md
+  description: Tabnine Client & Deployment Requirements

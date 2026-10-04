@@ -1,0 +1,154 @@
+generated: '2026-10-04'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 11
+  own: 0
+  other_domain: 0
+  platform: 2
+  roles:
+  - api
+  - docs
+  - legal
+  - marketing
+  - other
+  - source
+  - status
+  - support
+hosts:
+- host: api.tabnine.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: tabnine.com
+  role: api
+  relation: unknown
+- host: console.tabnine.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: tabnine.com
+  role: other
+  relation: unknown
+- host: docs.tabnine.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - ChangeLog
+  - GettingStarted
+  - Documentation
+  serves:
+  - docs
+  - cdn
+  - documentation
+  - hosting
+  vendor: cloudflare
+  registrable_domain: tabnine.com
+  role: docs
+  relation: unknown
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: status.tabnine.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: tabnine.com
+  role: status
+  relation: unknown
+- host: support.tabnine.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: tabnine.com
+  role: support
+  relation: unknown
+- host: tabnine.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: tabnine.com
+  role: other
+  relation: unknown
+- host: trust.tabnine.com
+  found_by:
+  - pointer
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: tabnine.com
+  role: other
+  relation: unknown
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.tabnine.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Integrations
+  - Blog
+  serves:
+  - api
+  - docs
+  - hosting
+  vendor: netlify
+  registrable_domain: tabnine.com
+  role: marketing
+  relation: unknown
+- host: www.tricentis.com
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - Newsroom
+  - Leadership
+  serves: []
+  registrable_domain: tricentis.com
+  role: legal
+  relation: unknown

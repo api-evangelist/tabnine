@@ -1,13 +1,15 @@
 aid: tabnine
+
 url: https://raw.githubusercontent.com/api-evangelist/tabnine/refs/heads/main/apis.yml
+
 name: Tabnine
+
 kind: company
-description: >-
-  Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI,
-  with strong support for SaaS, VPC, and air-gapped on-prem deployments. The Enterprise
-  Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's
-  consumer surface is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI;
-  there is no general-purpose public REST inference API for end-developers.
+
+description: Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI, with strong support for SaaS, VPC, and air-gapped
+  on-prem deployments. The Enterprise Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's consumer surface
+  is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI; there is no general-purpose public REST inference API for end-developers.
+
 deliveryModel:
   model: saas
   open_source: false
@@ -19,6 +21,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -31,90 +34,174 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tabnine.png
+
 tags:
-  - Artificial Intelligence
-  - Developer Tools
-  - Code Completion
-  - Self-Hosted
-  - Enterprise
-  - Privacy
+- Artificial Intelligence
+- Developer Tools
+- Code Completion
+- Self-Hosted
+- Enterprise
+- Privacy
+
 tags_raw:
-  - AI
-  - Developer Tools
-  - Code Completion
-  - Self-Hosted
-  - Enterprise
-  - Privacy
+- AI
+- Developer Tools
+- Code Completion
+- Self-Hosted
+- Enterprise
+- Privacy
+
 created: '2026-05-08'
+
 modified: '2026-05-08'
+
 specificationVersion: '0.23'
-apis:
-  - aid: tabnine:plugins
-    name: Tabnine IDE Plugins
-    description: >-
-      VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing
-      autocomplete, chat, and agentic workflows. Communicates with Tabnine's hosted or
-      self-hosted backend over a proprietary protocol.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.tabnine.com/
-    baseURL: https://www.tabnine.com
-    tags:
-      - Plugins
-      - IDE
-      - Autocomplete
-      - Chat
-    properties:
-      - type: ProductPage
-        url: https://www.tabnine.com/
-      - type: Documentation
-        url: https://docs.tabnine.com/
-  - aid: tabnine:enterprise
-    name: Tabnine Enterprise (Admin Suite + Context Engine)
-    description: >-
-      Enterprise SKU with admin console (data analytics, model provisioning, context
-      permissions, SSO), Enterprise Context Engine (codebase indexing), and flexible
-      deployment (SaaS / VPC / Local / Air-Gapped). $39/user/month list price; custom
-      enterprise contracts available.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.tabnine.com/pricing-enterprise-context-engine/
-    baseURL: https://www.tabnine.com
-    tags:
-      - Enterprise
-      - Self-Hosted
-      - Air-Gapped
-      - SSO
-      - Admin
-    properties:
-      - type: ProductPage
-        url: https://www.tabnine.com/pricing-enterprise-context-engine/
-      - type: Documentation
-        url: https://docs.tabnine.com/
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
 common:
-  - type: TrustCenter
-    url: security/tabnine-trust-center.yml
-  - type: DomainSecurity
-    url: security/tabnine-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/codota
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/tabnine
-  - type: Website
+- type: LLMsTxt
+  url: llms/tabnine-llms.txt
+- type: SecurityTxt
+  url: well-known/tabnine-status-security.txt
+- type: Spectral
+  url: rules/tabnine-rules.yml
+- type: JSONLD
+  url: json-ld/tabnine-context.jsonld
+- type: Vocabulary
+  url: vocabulary/tabnine-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/tabnine-webhooks.yml
+- type: DataModel
+  url: data-model/tabnine-data-model.yml
+- type: ChangeLog
+  url: changelog/tabnine-changelog.yml
+- type: Compliance
+  url: https://trust.tabnine.com/
+- type: Authentication
+  url: authentication/tabnine-authentication.yml
+- type: Conformance
+  url: conformance/tabnine-conformance.yml
+- type: WellKnown
+  url: well-known/tabnine-well-known.yml
+- type: Hosts
+  url: hosts/tabnine-hosts.yml
+- type: Vendors
+  url: vendors/tabnine-vendors.yml
+- type: TermsOfService
+  url: https://www.tricentis.com/resources/tosca-cloud-ata-demo
+- type: Support
+  url: https://support.tabnine.com/hc/en-us
+- type: StatusPage
+  url: https://status.tabnine.com/
+- type: PrivacyPolicy
+  url: https://docs.tabnine.com/main/welcome/readme/privacy
+- type: Newsroom
+  url: https://www.tricentis.com/news
+- type: Leadership
+  url: https://www.tricentis.com/team
+- type: ChangeLog
+  url: https://docs.tabnine.com/main/administering-tabnine/release-notes
+- type: GettingStarted
+  url: https://docs.tabnine.com/main/getting-started/install
+- type: TrustCenter
+  url: security/tabnine-trust-center.yml
+- type: DomainSecurity
+  url: security/tabnine-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/codota
+- type: LinkedIn
+  url: https://www.linkedin.com/company/tabnine
+- type: Documentation
+  url: https://docs.tabnine.com/
+- type: Plans
+  url: plans/tabnine-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/tabnine-rate-limits.yml
+- type: FinOps
+  url: finops/tabnine-finops.yml
+- type: Integrations
+  url: https://www.tabnine.com/partners/
+- url: https://www.tabnine.com/blog/feed/
+  type: Blog
+
+apis:
+- aid: tabnine:plugins
+  name: Tabnine IDE Plugins
+  description: VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing autocomplete, chat, and agentic workflows. Communicates
+    with Tabnine's hosted or self-hosted backend over a proprietary protocol.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tabnine.com/
+  baseURL: https://www.tabnine.com
+  tags:
+  - Plugins
+  - IDE
+  - Autocomplete
+  - Chat
+  properties:
+  - type: ProductPage
     url: https://www.tabnine.com/
   - type: Documentation
     url: https://docs.tabnine.com/
-  - type: Plans
-    url: plans/tabnine-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/tabnine-rate-limits.yml
-  - type: FinOps
-    url: finops/tabnine-finops.yml
-  - type: Integrations
-    url: https://www.tabnine.com/partners/
-  - url: https://www.tabnine.com/blog/feed/
-    type: Blog
+- aid: tabnine:enterprise
+  name: Tabnine Enterprise (Admin Suite + Context Engine)
+  description: Enterprise SKU with admin console (data analytics, model provisioning, context permissions, SSO), Enterprise Context Engine (codebase
+    indexing), and flexible deployment (SaaS / VPC / Local / Air-Gapped). $39/user/month list price; custom enterprise contracts available.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tabnine.com/pricing-enterprise-context-engine/
+  baseURL: https://www.tabnine.com
+  tags:
+  - Enterprise
+  - Self-Hosted
+  - Air-Gapped
+  - SSO
+  - Admin
+  properties:
+  - type: ProductPage
+    url: https://www.tabnine.com/pricing-enterprise-context-engine/
+  - type: Documentation
+    url: https://docs.tabnine.com/
+- aid: tabnine:tabnine-api
+  name: Tabnine API
+  description: 'Tabnine API as documented publicly: 20 operations. Contract generated from the documentation by API Evangelist (2026-10-04); not
+
+    the provider''s own document.'
+  humanURL: https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/tabnine-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/tabnine-post-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-post-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-id-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation is served via Gitbook with no machine‑readable OpenAPI/AsyncAPI spec.
+  evidence:
+  - url: https://docs.tabnine.com/
+    status: 200
+  checked: '2026-10-04'
+
 integrations:
-  - name: Log in
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- name: Log in
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 20
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,39 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.tabnine.com/main/administering-tabnine/release-notes.md
+sources:
+- https://docs.tabnine.com/main/administering-tabnine/release-notes.md
+entries:
+- breaking: false
+  highlights:
+  - Added the /tabnine-status command, so users can check login status and 30-day usage without leaving the terminal.
+  - The agent now shows a Starting... message on first launch, resumes the previous session after auto-update, supports reliable SSH sign-in with
+    a manual code flow, and shows a clearer error when a requested model does not exist.
+  - Fixed a startup crash on macOS.
+  - Fixed an install failure in some automated and headless environments.
+  date: '2026-09-28'
+- breaking: false
+  highlights:
+  - Added upgrade instructions for the new Tabnine Plugin for OpenCode.
+  - Improved handling of "Ask first" policies.
+  date: '2026-09-24'
+- breaking: false
+  highlights:
+  - Fixed requests made with an expired or invalid sign-in token returning a server error instead of prompting you to sign in again.
+  - Fixed an issue where organization admins could not set the organization-wide per-user limit or per-team limits.
+  date: '2026-09-22'
+- breaking: false
+  highlights:
+  - Administrators working with very large user lists, for example when excluding many users from a selection, no longer hit request size limits.
+  - Fixed models configured with Agent enabled and Chat disabled being rejected in the IDE Agent tab and the Tabnine CLI with an "Unsupported
+    model" error, even though the model's connection test passed.
+  - Fixed an unnecessary failed request when loading available features for users who are not assigned to a team.
+  date: '2026-09-22'
+- breaking: false
+  highlights:
+  - Now available to all cu
+  date: '2026-09-15'
+scheme: vMAJOR.MINOR.PATCH
+current_version: 6.6.6
+docs: https://docs.tabnine.com/main/administering-tabnine/release-notes.md

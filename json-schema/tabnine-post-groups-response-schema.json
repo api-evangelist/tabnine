@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tabnine/main/json-schema/tabnine-post-groups-response-schema.json",
+  "title": "PostGroupsResponse",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostGroupsResponse",
+  "type": "object",
+  "properties": {
+    "201": {
+      "type": "string",
+      "description": "Deviation (significant) - if the org's sync mode is not `UsersAndTeams`, this endpoint does NOT call auth-service at all. It fabricates a 201 response with a random UUID and echoes the input back. The caller is told the group was created; nothing was persisted."
+    },
+    "400": {
+      "type": "string",
+      "description": "Missing `externalId`."
+    }
+  }
+}

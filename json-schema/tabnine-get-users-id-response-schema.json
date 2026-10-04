@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tabnine/main/json-schema/tabnine-get-users-id-response-schema.json",
+  "title": "GetUsersIdResponse",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetUsersIdResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "OK."
+    },
+    "401": {
+      "type": "string",
+      "description": "Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service)."
+    },
+    "404": {
+      "type": "string",
+      "description": "Not Found."
+    }
+  }
+}

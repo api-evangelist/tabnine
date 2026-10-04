@@ -1,0 +1,80 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/tabnine-openapi-generated.yml
+vocabulary:
+  name: Tabnine Domain Vocabulary
+  description: 'Terms declared by Tabnine''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-04'
+  terms:
+  - term: GetGroupsResponse
+    definition: 'Object declared by the contract with fields: 200, 401.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetGroupsResponse
+  - term: PostGroupsRequest
+    definition: 'Object declared by the contract with fields: CreateScimGroup.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostGroupsRequest
+  - term: PostGroupsResponse
+    definition: 'Object declared by the contract with fields: 201, 400.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostGroupsResponse
+  - term: GetGroupsIdResponse
+    definition: 'Object declared by the contract with fields: 200, 404.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetGroupsIdResponse
+  - term: PutGroupsIdRequest
+    definition: 'Object declared by the contract with fields: UpdateScimGroup.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PutGroupsIdRequest
+  - term: PutGroupsIdResponse
+    definition: 'Object declared by the contract with fields: 200, 404.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PutGroupsIdResponse
+  - term: GetSchemasIdResponse
+    definition: 'Object declared by the contract with fields: 200, 404.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetSchemasIdResponse
+  - term: GetUsersResponse
+    definition: 'Object declared by the contract with fields: 200, 400, 401.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetUsersResponse
+  - term: PostUsersRequest
+    definition: 'Object declared by the contract with fields: CreateScimUser.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostUsersRequest
+  - term: PostUsersResponse
+    definition: 'Object declared by the contract with fields: 201, 400, 401, 409.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostUsersResponse
+  - term: GetUsersIdResponse
+    definition: 'Object declared by the contract with fields: 200, 401, 404.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetUsersIdResponse
+  - term: GetMainGettingStartedInstallClientSetupPrivateInstallationMd
+    definition: 'Object declared by the contract with fields: answer.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetMainGettingStartedInstallClientSetupPrivateInstallationMd
+  - term: GetMainGettingStartedTabnineCliFeaturesHooksHookidResponse
+    definition: 'Object declared by the contract with fields: answer.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetMainGettingStartedTabnineCliFeaturesHooksHookidResponse
+  - term: GetMainGettingStartedTabninePluginForOpencodeMigratingFromTa
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetMainGettingStartedTabninePluginForOpencodeMigratingFromTa

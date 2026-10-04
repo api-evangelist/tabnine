@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@vocab": "https://tabnine.example/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "tabnine": "https://tabnine.example/schema#",
+    "GetGroupsResponse": "tabnine:GetGroupsResponse",
+    "PostGroupsRequest": "tabnine:PostGroupsRequest",
+    "CreateScimGroup": {
+      "@id": "tabnine:CreateScimGroup",
+      "@type": "xsd:string"
+    },
+    "PostGroupsResponse": "tabnine:PostGroupsResponse",
+    "GetGroupsIdResponse": "tabnine:GetGroupsIdResponse",
+    "PutGroupsIdRequest": "tabnine:PutGroupsIdRequest",
+    "UpdateScimGroup": {
+      "@id": "tabnine:UpdateScimGroup",
+      "@type": "xsd:string"
+    },
+    "PutGroupsIdResponse": "tabnine:PutGroupsIdResponse",
+    "GetSchemasIdResponse": "tabnine:GetSchemasIdResponse",
+    "GetUsersResponse": "tabnine:GetUsersResponse",
+    "PostUsersRequest": "tabnine:PostUsersRequest",
+    "CreateScimUser": {
+      "@id": "tabnine:CreateScimUser",
+      "@type": "xsd:string"
+    },
+    "PostUsersResponse": "tabnine:PostUsersResponse",
+    "GetUsersIdResponse": "tabnine:GetUsersIdResponse",
+    "GetMainGettingStartedInstallClientSetupPrivateInstallationMd": "tabnine:GetMainGettingStartedInstallClientSetupPrivateInstallationMd",
+    "answer": {
+      "@id": "tabnine:answer",
+      "@type": "xsd:string"
+    },
+    "GetMainGettingStartedTabnineCliFeaturesHooksHookidResponse": "tabnine:GetMainGettingStartedTabnineCliFeaturesHooksHookidResponse",
+    "GetMainGettingStartedTabninePluginForOpencodeMigratingFromTa": "tabnine:GetMainGettingStartedTabninePluginForOpencodeMigratingFromTa"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Tabnine API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Tabnine's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-04) from openapi/_ae-authored/tabnine-openapi-generated.yml.",
+  "dcterms:created": "2026-10-04",
+  "dcterms:source": [
+    "openapi/_ae-authored/tabnine-openapi-generated.yml"
+  ]
+}

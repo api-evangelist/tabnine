@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tabnine/main/json-schema/tabnine-get-groups-id-response-schema.json",
+  "title": "GetGroupsIdResponse",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/GetGroupsIdResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "OK."
+    },
+    "404": {
+      "type": "string",
+      "description": "Not found, OR sync mode is not `UsersAndTeams` (both cases return 404 here - inconsistent with GET /Groups, which returns an empty 200 list for the same disabled-sync-mode condition instead of an error)."
+    }
+  }
+}

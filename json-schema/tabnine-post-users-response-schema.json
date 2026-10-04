@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tabnine/main/json-schema/tabnine-post-users-response-schema.json",
+  "title": "PostUsersResponse",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/tabnine-openapi-generated.yml#/components/schemas/PostUsersResponse",
+  "type": "object",
+  "properties": {
+    "201": {
+      "type": "string",
+      "description": "Created."
+    },
+    "400": {
+      "type": "string",
+      "description": "Missing `userName` or `externalId`. (These are the only two fields validated at runtime, despite `meta.resourceType` being typed as required — it is not enforced.)"
+    },
+    "401": {
+      "type": "string",
+      "description": "Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service)."
+    },
+    "409": {
+      "type": "string",
+      "description": "Deviation from RFC (no standard SCIM 409 body defined) - a user with this `userName` already has an `externalId` set."
+    }
+  }
+}
