@@ -121,9 +121,9 @@ common:
 apis:
 - aid: tabnine:plugins
   name: Tabnine IDE Plugins
-  description: VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing autocomplete,
-    chat, and agentic workflows. Communicates with Tabnine's hosted or self-hosted backend over a proprietary
-    protocol.
+  description: >-
+    VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing autocomplete, chat, and
+    agentic workflows. Communicates with Tabnine's hosted or self-hosted backend over a proprietary protocol.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.tabnine.com/
   baseURL: https://www.tabnine.com
@@ -139,9 +139,10 @@ apis:
     url: https://docs.tabnine.com/
 - aid: tabnine:enterprise
   name: Tabnine Enterprise (Admin Suite + Context Engine)
-  description: Enterprise SKU with admin console (data analytics, model provisioning, context permissions,
-    SSO), Enterprise Context Engine (codebase indexing), and flexible deployment (SaaS / VPC / Local /
-    Air-Gapped). $39/user/month list price; custom enterprise contracts available.
+  description: >-
+    Enterprise SKU with admin console (data analytics, model provisioning, context permissions, SSO),
+    Enterprise Context Engine (codebase indexing), and flexible deployment (SaaS / VPC / Local / Air-Gapped).
+    $39/user/month list price; custom enterprise contracts available.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.tabnine.com/pricing-enterprise-context-engine/
   baseURL: https://www.tabnine.com
@@ -156,17 +157,78 @@ apis:
     url: https://www.tabnine.com/pricing-enterprise-context-engine/
   - type: Documentation
     url: https://docs.tabnine.com/
-- aid: tabnine:tabnine-api
-  name: Tabnine API
-  description: 'Tabnine API as documented publicly: 20 operations. Contract generated from the documentation
-    by API Evangelist (2026-10-04); not
-
-    the provider''s own document.'
-  humanURL: https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+- aid: tabnine:tabnine-groups-api
+  name: Tabnine Groups API
+  description: The Groups API from Tabnine — 2 operation(s) for groups.
+  humanURL: https://www.tabnine.com/
+  tags:
+  - Groups
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/tabnine-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/tabnine-groups-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/tabnine-post-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-post-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-id-response-schema.json
+- aid: tabnine:tabnine-main-api
+  name: Tabnine Main API
+  description: The Main API from Tabnine — 12 operation(s) for main.
+  humanURL: https://www.tabnine.com/
+  tags:
+  - Main
+  properties:
+  - type: OpenAPI
+    url: openapi/tabnine-main-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/tabnine-post-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-post-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-id-response-schema.json
+- aid: tabnine:tabnine-schemas-api
+  name: Tabnine Schemas API
+  description: The Schemas API from Tabnine — 1 operation(s) for schemas.
+  humanURL: https://www.tabnine.com/
+  tags:
+  - Schemas
+  properties:
+  - type: OpenAPI
+    url: openapi/tabnine-schemas-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/tabnine-post-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-post-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-users-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/tabnine-get-groups-id-response-schema.json
+- aid: tabnine:tabnine-users-api
+  name: Tabnine Users API
+  description: The Users API from Tabnine — 2 operation(s) for users.
+  humanURL: https://www.tabnine.com/
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/tabnine-users-api-openapi.yml
   - type: JSONSchema
     url: json-schema/tabnine-post-users-response-schema.json
   - type: JSONSchema

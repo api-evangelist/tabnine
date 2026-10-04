@@ -1,0 +1,76 @@
+openapi: 3.2.0
+info:
+  title: Tabnine Schemas API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 20 operation(s) read from 16 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Tabnine has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 20
+    pages-with-code: 0
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/settings/settings-reference.md
+  - https://docs.tabnine.com/main/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/examples.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/tabnine-apis.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/agent-guidelines-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/protection/provenance-and-attribution-in-tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/examples-and-best-practices.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-plugin-for-opencode/migrating-from-tabnine-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/system-requirements/tabnine-client-and-deployment-requirements.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/eclipse-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/git-integrations/github-actions/tabnine-cli-gha-trust-guidance.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+security:
+- Personal_Access_Token: []
+tags:
+- name: Schemas
+paths:
+  /Schemas/{id}:
+    get:
+      operationId: get_Schemas_id
+      tags:
+      - Schemas
+      summary: Get a single schema by its URN ID
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSchemasIdResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetSchemasIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK.
+        '404':
+          type: string
+          description: Not Found.
+  securitySchemes:
+    Personal_Access_Token:
+      type: http
+      scheme: bearer
+      x-source: https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md

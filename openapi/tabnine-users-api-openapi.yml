@@ -1,0 +1,170 @@
+openapi: 3.2.0
+info:
+  title: Tabnine Users API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 20 operation(s) read from 16 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Tabnine has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 20
+    pages-with-code: 0
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/settings/settings-reference.md
+  - https://docs.tabnine.com/main/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/examples.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/tabnine-apis.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/agent-guidelines-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/protection/provenance-and-attribution-in-tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/examples-and-best-practices.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-plugin-for-opencode/migrating-from-tabnine-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/system-requirements/tabnine-client-and-deployment-requirements.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/eclipse-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/git-integrations/github-actions/tabnine-cli-gha-trust-guidance.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+security:
+- Personal_Access_Token: []
+tags:
+- name: Users
+paths:
+  /Users:
+    get:
+      operationId: get_Users
+      tags:
+      - Users
+      summary: List/search users
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Only `userName eq "<value>"` is supported. Any other property or operator returns 400. (scim.router.ts parseScimFilter)
+      - name: count
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page size. Optional, passed through to auth-service (default 10 there).
+      - name: startIndex
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 1-based per SCIM spec. Converted to 0-based before calling the internal auth-service API.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUsersResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_Users
+      tags:
+      - Users
+      summary: Create a user
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostUsersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostUsersResponse'
+      x-evidence:
+        kind: documentation
+  /Users/{id}:
+    get:
+      operationId: get_Users_id
+      tags:
+      - Users
+      summary: Get a user by ID
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUsersIdResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetUsersIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK.
+        '401':
+          type: string
+          description: Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service).
+        '404':
+          type: string
+          description: Not Found.
+    GetUsersResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: 'OK. Deviation - no real pagination handling (`AuthClient.getUsers` has `// TODO: handle pagination`); totalResults may not reflect true dataset size across pages.'
+        '400':
+          type: string
+          description: Bad Request.
+        '401':
+          type: string
+          description: Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service).
+    PostUsersResponse:
+      type: object
+      properties:
+        '201':
+          type: string
+          description: Created.
+        '400':
+          type: string
+          description: Missing `userName` or `externalId`. (These are the only two fields validated at runtime, despite `meta.resourceType` being typed as required — it is not enforced.)
+        '401':
+          type: string
+          description: Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service).
+        '409':
+          type: string
+          description: Deviation from RFC (no standard SCIM 409 body defined) - a user with this `userName` already has an `externalId` set.
+    PostUsersRequest:
+      type: object
+      properties:
+        CreateScimUser:
+          type: string
+          description: Schema for creating a user
+      required:
+      - CreateScimUser
+  securitySchemes:
+    Personal_Access_Token:
+      type: http
+      scheme: bearer
+      x-source: https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md

@@ -1,0 +1,213 @@
+openapi: 3.2.0
+info:
+  title: Tabnine Groups API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 20 operation(s) read from 16 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Tabnine has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 20
+    pages-with-code: 0
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/event-reference.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/settings/settings-reference.md
+  - https://docs.tabnine.com/main/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/examples.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/tabnine-apis.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/getting-started/quickstart.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/agent-guidelines-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/protection/provenance-and-attribution-in-tabnine-cli.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/features/hooks/examples-and-best-practices.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-plugin-for-opencode/migrating-from-tabnine-cli.md
+  - https://docs.tabnine.com/main/welcome/readme/system-requirements/tabnine-client-and-deployment-requirements.md
+  - https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/eclipse-private-installation.md
+  - https://docs.tabnine.com/main/getting-started/tabnine-cli/git-integrations/github-actions/tabnine-cli-gha-trust-guidance.md
+  - https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+security:
+- Personal_Access_Token: []
+tags:
+- name: Groups
+paths:
+  /Groups:
+    get:
+      operationId: get_Groups
+      tags:
+      - Groups
+      summary: List/search groups
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Only `displayName eq "<value>"` is supported.
+      - name: count
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: startIndex
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 1-based, converted to 0-based internally.
+      - name: excludedAttributes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated attribute names to omit from each result (e.g. `members`).
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetGroupsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_Groups
+      tags:
+      - Groups
+      summary: Create a group
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostGroupsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostGroupsResponse'
+      x-evidence:
+        kind: documentation
+  /Groups/{id}:
+    get:
+      operationId: get_Groups_id
+      tags:
+      - Groups
+      summary: Get a group by ID
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: excludedAttributes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated attribute names to omit from the result.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetGroupsIdResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_Groups_id
+      tags:
+      - Groups
+      summary: Replace a group
+      x-source: https://docs.tabnine.com/main/administering-tabnine/managing-your-team/settings/general-settings/idp-sync/tabnine-scim-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutGroupsIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutGroupsIdResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetGroupsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Deviation - if the organization's IDP sync mode is not `UsersAndTeams` (i.e. group provisioning isn't enabled for that org/token), this returns 200 with an empty list rather than an error, masking the feature-flag state.
+        '401':
+          type: string
+          description: Missing/invalid bearer token, org mismatch, IDP sync disabled for the org, key ID mismatch, or key expired (verifyIdpKeyMiddleware in auth-service).
+    PutGroupsIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Deviation - if sync mode is not `UsersAndTeams`, fabricates a 200 echo of the input without persisting anything (same no-op pattern as POST /Groups).
+        '404':
+          type: string
+          description: Not Found.
+    PostGroupsRequest:
+      type: object
+      properties:
+        CreateScimGroup:
+          type: string
+          description: Schema for creating a group
+      required:
+      - CreateScimGroup
+    PostGroupsResponse:
+      type: object
+      properties:
+        '201':
+          type: string
+          description: Deviation (significant) - if the org's sync mode is not `UsersAndTeams`, this endpoint does NOT call auth-service at all. It fabricates a 201 response with a random UUID and echoes the input back. The caller is told the group was created; nothing was persisted.
+        '400':
+          type: string
+          description: Missing `externalId`.
+    GetGroupsIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK.
+        '404':
+          type: string
+          description: Not found, OR sync mode is not `UsersAndTeams` (both cases return 404 here - inconsistent with GET /Groups, which returns an empty 200 list for the same disabled-sync-mode condition instead of an error).
+    PutGroupsIdRequest:
+      type: object
+      properties:
+        UpdateScimGroup:
+          type: string
+          description: Schema for updating a group
+      required:
+      - UpdateScimGroup
+  securitySchemes:
+    Personal_Access_Token:
+      type: http
+      scheme: bearer
+      x-source: https://docs.tabnine.com/main/getting-started/install/client-setup-private-installation/sign-in-using-authentication-token.md
