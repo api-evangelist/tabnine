@@ -1,4 +1,4 @@
-# Tabnine (tabnine)
+# Tabnine
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,45 +64,155 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI, with strong support for SaaS, VPC, and air-gapped on-prem deployments. The Enterprise Context Engine indexes a customer's codebase, dependencies, and architecture.
+Tabnine provides AI code completion, chat, and agentic workflows across IDEs and CLI, with strong support for SaaS, VPC, and air-gapped on-prem deployments. The Enterprise Context Engine indexes a customer's codebase, dependencies, and architecture. Tabnine's consumer surface is via IDE plugins (VS Code, JetBrains, Eclipse) and the Tabnine CLI; there is no general-purpose public REST inference API for end-developers.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/tabnine/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Developer Tools · Code Completion · Self-Hosted · Enterprise · Privacy
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=tabnine-api-evangelist&utm_content=repo)
+## Tabnine on APIs.io
 
-## Type
-- **x-type:** company
+Everything profiled for Tabnine is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tabnine/](https://apis.io/providers/tabnine/)** — or go straight to one of the APIs or properties below.
 
-## Tags
-- AI, Developer Tools, Code Completion, Self-Hosted, Enterprise, Privacy
+### APIs (6)
 
-## APIs
-- **Tabnine IDE Plugins** — VS Code, JetBrains (IntelliJ, PhpStorm, etc.), Eclipse. Autocomplete, chat, agentic workflows over a proprietary protocol.
-- **Tabnine Enterprise (Admin Suite + Context Engine)** — Admin console (analytics, model provisioning, context permissions, SSO), Enterprise Context Engine (codebase indexing), flexible deployment (SaaS / VPC / Local / Air-Gapped).
+- [Tabnine IDE Plugins](https://apis.io/apis/tabnine/plugins/) — VS Code, JetBrains (IntelliJ, PhpStorm, etc.), and Eclipse plugins surfacing autocomplete, chat, and agentic workflows. Communicates with Tabnine's hosted…
+- [Tabnine Enterprise (Admin Suite + Context Engine)](https://apis.io/apis/tabnine/enterprise/) — Enterprise SKU with admin console (data analytics, model provisioning, context permissions, SSO), Enterprise Context Engine (codebase indexing), and…
+- [Tabnine Groups API](https://apis.io/apis/tabnine/tabnine-groups-api/) — The Groups API from Tabnine — 2 operation(s) for groups.
+- [Tabnine Main API](https://apis.io/apis/tabnine/tabnine-main-api/) — The Main API from Tabnine — 12 operation(s) for main.
+- [Tabnine Schemas API](https://apis.io/apis/tabnine/tabnine-schemas-api/) — The Schemas API from Tabnine — 1 operation(s) for schemas.
+- [Tabnine Users API](https://apis.io/apis/tabnine/tabnine-users-api/) — The Users API from Tabnine — 2 operation(s) for users.
 
-### Plans (May 2026)
-- **Free** — Basic completions.
-- **Pro** — Advanced features (consumer/individual).
-- **Enterprise** — $39/user/month list. SaaS, VPC, on-prem, or air-gapped; admin suite; IP indemnification; custom enterprise contracts available.
+### Published properties
 
-## Plans, Rate Limits, FinOps
-- [Plans](plans/tabnine-plans-pricing.yml)
-- [RateLimits](rate-limits/tabnine-rate-limits.yml)
-- [FinOps](finops/tabnine-finops.yml)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+#### AsyncAPI (1)
 
-## Common Properties
+Event-driven and webhook contracts.
+
+- [Tabnine Webhooks](https://apis.io/asyncapis/tabnine/tabnine-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [tabnine-mcp.yml](https://apis.io/servers/tabnine/tabnine-mcp-yml/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetGroupsIdResponse](https://apis.io/schemas/tabnine/tabnine-get-groups-id-response/)
+- [GetGroupsResponse](https://apis.io/schemas/tabnine/tabnine-get-groups-response/)
+- [GetUsersIdResponse](https://apis.io/schemas/tabnine/tabnine-get-users-id-response/)
+- [GetUsersResponse](https://apis.io/schemas/tabnine/tabnine-get-users-response/)
+- [PostGroupsResponse](https://apis.io/schemas/tabnine/tabnine-post-groups-response/)
+- [PostUsersResponse](https://apis.io/schemas/tabnine/tabnine-post-users-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Tabnine Context](https://apis.io/jsonld/tabnine/tabnine-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Tabnine API Rules](https://apis.io/rules/tabnine/tabnine-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Tabnine Authentication](https://apis.io/security/tabnine/tabnine-authentication/)
+- [Tabnine Domain Security](https://apis.io/security/tabnine/tabnine-domain-security/)
+- [Tabnine Trust Center](https://apis.io/security/tabnine/tabnine-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Tabnine Plans Pricing](https://apis.io/plans/tabnine/tabnine-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Tabnine Rate Limits](https://apis.io/rate-limits/tabnine/tabnine-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Tabnine Finops](https://apis.io/finops/tabnine/tabnine-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.tabnine.com/)
 - [Documentation](https://docs.tabnine.com/)
+- [Getting started](https://docs.tabnine.com/main/getting-started/install)
+- [Support](https://support.tabnine.com/hc/en-us)
+- [Changelog](https://docs.tabnine.com/main/administering-tabnine/release-notes)
+- [Blog](https://www.tabnine.com/blog/feed/)
+- [Compliance](https://trust.tabnine.com/)
+- [Terms of service](https://www.tricentis.com/resources/tosca-cloud-ata-demo)
+- [Privacy policy](https://docs.tabnine.com/main/welcome/readme/privacy)
+- [GitHub](https://github.com/codota)
+- [Status](https://status.tabnine.com/)
 
-## Notes
-- Tabnine does not expose a general-purpose public REST inference API for end-developers. Consumption is via IDE plugins and the Tabnine CLI talking to Tabnine's hosted or self-hosted backend over a proprietary protocol.
-- No public OpenAPI spec discovered.
+## API Evangelist rating
 
-## Maintainers
-**FN:** Kin Lane
+**Kin Score 42.6** — developing · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 30.0 |
+| Contract governance | 22.0 |
+| Operational transparency | 57.9 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 42.1 |
+
+**Agent readiness 25.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 27.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tabnine/](https://apis.io/providers/tabnine/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tabnine: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tabnine/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
